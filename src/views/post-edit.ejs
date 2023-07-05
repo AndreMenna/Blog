@@ -1,0 +1,44 @@
+<%- include('header') %>
+
+<body>
+   
+    <main class="container">
+
+        <h1>Editar o post</h1>
+
+    <form action="/posts/<%= post.id %>" method="post">
+
+        <div class="form-group">
+            <label for="title">Título</label>
+            <input type="text" class="form-control" value="<%= post.title %>" name="title">
+        </div>
+      
+        <br>
+
+        <div class="form-group">
+            <label for="description">Descrição</label>
+            <textarea class="form-control" rows="3" name="description"><%= post.description %></textarea>
+          </div>
+
+        <br>
+        <div class="form-group">
+            <label for="author">Autor</label>
+            <input type="text" class="form-control" value= "<%= post.author %>" name="author">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="url">URL da imagem</label>
+            <input type="text" class="form-control" value= "<%= post.url %>"name="url">
+        </div>
+
+
+        <br>
+        <input type="hidden" name="id" value= "<%= post.id %>" />
+
+        <button type="submit" class="btn btn-primary btn float-right">Atualizar</button>
+    </form>
+    </main>
+</body>
+
+</html>

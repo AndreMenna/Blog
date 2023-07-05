@@ -1,0 +1,21 @@
+<%- include('header') %>
+
+<body>
+    <div class="container">
+        <div>
+            <a href="/add-post" class="btn btn-success float-right" >Inserir post</a>
+            <p class="card-text "><%= posts.length %> Postagens</p>
+        </div>
+        <br>
+
+        <main>
+            <ul class="post-home">
+            <% for (let i = 0; i < posts.length; i++) { %>
+                <%- include('./includes/posts/show', { post: posts[i] })%>
+            <% } %> 
+            </ul>
+        </main>
+    </br></br>
+    </div>
+</body>
+</html>

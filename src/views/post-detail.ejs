@@ -1,0 +1,31 @@
+<%- include('header') %>
+<%
+var timestamp = post.created_at;
+var date = new Date(timestamp);
+var dateTime = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes() + "hs";
+var foto = (post.url ? post.url : 'https://sintep.org.br/sintep/admin/uploads/arquivos/1634930642sem-foto.png');
+%> 
+
+<body>
+
+    <div class="container">
+        <a href="/delete/<%= post.id %>" class="btn btn-danger btn float-right">Excluir</a>
+        <a href="/edit/<%= post.id %>" class="btn btn-warning btn float-right">Editar</a>
+        </br></br>
+        <h1 class="text-center"><%= post.title %></h1>
+        <h4>Autor: <%= post.author %></h4>
+        <h6>Criado em: <%= dateTime %></h6>
+
+        <div class="container">
+            </br></br>
+            <p><%= post.description %></p>
+        </div>
+        <div class="container">
+            <img class="card-img-top" src="<%= foto %>" alt="Card image cap">
+
+            </div>
+
+    </div>
+</body>
+
+</html>

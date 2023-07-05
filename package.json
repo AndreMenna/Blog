@@ -1,0 +1,22 @@
+{
+    "name": "trabalho1blog",
+    "version": "1.0.0",
+    "description": "Trabalho 1 WeebII | Blog",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js"
+    },
+    "author": "André Luiz A. Menna",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.20"
+    },
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "sqlite3": "^5.1.2"
+    },
+    "keywords": []
+}

@@ -1,0 +1,20 @@
+    <%
+    var timestamp = post.created_at;
+    var date = new Date(timestamp);
+    var dateTime = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes() + "hs";
+    var foto = (post.url ? post.url : 'https://sintep.org.br/sintep/admin/uploads/arquivos/1634930642sem-foto.png');
+    %> 
+        
+    <div class="card" style="width: 50rem;">
+    </br></br>
+     <h5 class="card-title" style="background-color: rgb(0, 137, 201); color: #ffffff; font-weight: bold; font-size: 30px"><%= post.title %> </h5>
+    </br>
+        <img class="card-img-top" src="<%= foto %>" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><%= post.description %></p>
+          <p class="card-text">Autor: <%= post.author %></p>
+          <p class="card-text">Criado em:  <%=  dateTime %></p>
+          <a href="/posts/<%= post.id %>" class="btn btn-secondary btn-lg float-right">Visualizar post</a>
+        </div>
+      </div>
+</br></br></br>
